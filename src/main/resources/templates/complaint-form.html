@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submit Complaint</title>
+</head>
+<body>
+<h1>Submit Your Complaint</h1>
+<form th:action="@{/submit}" method="post" th:object="${complaint}">
+    Name: <input type="text" name="name" required><br>
+    Email: <input type="email" name="email" required><br>
+    Message: <textarea name="message" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

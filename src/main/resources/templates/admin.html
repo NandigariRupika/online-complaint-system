@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+<h1>All Complaints</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+    </tr>
+    <tr th:each="complaint : ${complaints}">
+        <td th:text="${complaint.id}"></td>
+        <td th:text="${complaint.name}"></td>
+        <td th:text="${complaint.email}"></td>
+        <td th:text="${complaint.message}"></td>
+    </tr>
+</table>
+</body>
+</html>
